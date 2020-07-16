@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px,
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px,
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12,
+  }
+}
+
+body {
+  box-sizing: border-box;
+  color: $body-col;
+  z-index: 0;
+}
+
+.container {
+  min-height: 67vh;
+  padding: 0 10rem;
+  @include respond(tab-land) {
+    padding: 0 6rem;
+  }
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}
+
+i {
+  margin-right: 0.5rem;
+}

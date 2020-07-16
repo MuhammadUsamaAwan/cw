@@ -1,0 +1,38 @@
+.why-wait {
+  margin-bottom: 20rem;
+  &__form {
+    @include flex-center;
+    margin-bottom: 1rem;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    & > * {
+      display: flex;
+      align-items: center;
+      font-family: inherit !important;
+      font-size: inherit !important;
+      padding: 0.5rem 1rem;
+    }
+    & > :not(:last-child) {
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+    select,
+    #email {
+      margin-right: 1rem;
+    }
+    #submit {
+      cursor: pointer;
+      background-color: $calculator-submit;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0.5rem;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

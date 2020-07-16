@@ -1,0 +1,59 @@
+.free-services {
+  margin-bottom: 20rem;
+  margin-left: -10rem;
+  margin-right: -10rem;
+  padding: 2rem 10rem;
+  @include respond(tab-land) {
+    margin-left: -6rem;
+    margin-right: -6rem;
+    padding: 2rem 6rem;
+  }
+  @include respond(phone) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 2rem -1rem; 
+  }
+  background-image: url("../../images/services_banner.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4rem;
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      & > *:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+    p {
+      text-transform: uppercase;
+      font-weight: 600;
+      span {
+        float: right;
+      }
+    }
+    &__price {
+      font-weight: 400;
+      text-decoration: line-through;
+      margin-right: 2rem;
+    }
+    &__free {
+      font-size: 2rem;
+    }
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    span {
+      color: $primary-heading-col;
+    }
+  }
+}

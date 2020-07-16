@@ -1,0 +1,44 @@
+.why {
+  background-image: url("../../images//why_banner.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin: 0 -10rem;
+  padding: 2rem 10rem;
+  @include respond(phone) {
+    margin: 0;
+    padding: 0 1rem;
+  }
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem 1rem;
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    h4 {
+      display: inline-block;
+    }
+    i,
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      @include respond(tab-land) {
+        font-size: 2rem;
+      }
+    }
+    h3 {
+      display: inline-block;
+    }
+    i {
+      color: #00c853;
+    }
+    p {
+      padding: 1rem 0;
+    }
+  }
+}

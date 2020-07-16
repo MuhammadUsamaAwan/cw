@@ -1,0 +1,30 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  &--primary {
+    background-color: $button-primary-bg;
+    color: $button-primary-col;
+    &:hover {
+      background-color: darken($button-primary-bg, 15);
+    }
+  }
+  &--secondary {
+    background-color: $button-secondary-bg;
+    color: $button-secondary-col;
+    &:hover {
+      background-color: darken($button-secondary-bg, 15);
+    }
+  }
+  &--tertiary {
+    color: $body-col;
+    border: 2px solid $body-col;
+  }
+}

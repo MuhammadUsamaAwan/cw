@@ -1,0 +1,45 @@
+.order {
+  margin-bottom: 25rem;
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    & > :nth-child(odd) {
+      flex: 2;
+    }
+    & > :nth-child(even) {
+      flex: 1;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+    i {
+      margin: 0;
+      font-size: 4rem;
+      align-self: center;
+    }
+    &__step {
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+      i {
+        border-radius: 50%;
+        border: 1px solid $primary-heading-col;
+        padding: 2rem;
+        background-color: lighten($primary-heading-col, 50);
+        font-size: 5rem;
+      }
+      h3 {
+        padding: 1rem 0;
+      }
+      p {
+        @include respond(phone) {
+          padding: 0 6rem;
+        }
+      }
+    }
+  }
+}

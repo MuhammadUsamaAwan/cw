@@ -1,0 +1,27 @@
+.premium {
+  @include flex-center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+  & > :first-child {
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
+  }
+  & > * {
+    flex: 1;
+  }
+  &__icon {
+    height: 35rem;
+  }
+  h3 {
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+  p {
+    padding: 0 10rem;
+    @include respond(tab-land) {
+      padding: 0 5rem;
+    }
+  }
+}
