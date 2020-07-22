@@ -1,8 +1,7 @@
 .calculator {
   background: $calculator-bg;
-  padding: 4rem 4rem 3rem;
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
-  border-radius: 2rem;
+  padding: 4rem;
+  @include box-shadow;
   &__heading {
     font-size: 2.4rem;
     margin-bottom: 3rem;
@@ -17,14 +16,17 @@
       padding: 1.5rem;
       cursor: pointer;
     }
-    li:hover {
-      background-color: $calculator-active;
-      color: white;
+    & > :not(:last-child) {
+      margin-right: 2px;
     }
+  }
+  &__level li,
+  &__form > * {
+    border-radius: 0.5rem;
   }
   &__form {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1.1fr 0.9fr 1fr;
+    grid-template-columns: repeat(3, 1fr) 1fr 0.9fr 1fr;
     grid-template-rows: repeat(5, 1fr);
     & > * {
       display: flex;
@@ -72,39 +74,22 @@
     & > :nth-child(10) {
       grid-area: 5 / 3 / 6 / 7;
     }
+    select,
+    #pages {
+      padding: 0 1rem;
+    }
     select {
       margin-bottom: 1rem;
-      padding: 0 1rem;
     }
     #pages {
       text-align: center;
       margin-right: 1rem;
-      padding: 0 1rem;
-    }
-    button,
-    #submit {
-      cursor: pointer;
-      justify-content: center;
-      border-radius: 0.5rem;
     }
     button {
+      justify-content: center;
       background-color: #fff;
-    }
-    button:hover {
-      background-color: $calculator-active;
-      color: #fff;
-    }
-    #submit {
-      background-color: $calculator-submit;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    #submit:hover {
-      background-color: darken($calculator-submit, 5);
-    }
-    #date {
-      margin-left: 1rem;
-      padding: 0 1rem;
+      outline: none;
+      cursor: pointer;
     }
     &__price {
       display: block;
@@ -115,8 +100,10 @@
       }
     }
   }
-  &__active {
-    background-color: $calculator-active !important;
-    color: white;
+  &__active,
+  &__level li:hover,
+  button:hover {
+    background-color: $secondary-col !important;
+    color: #fff;
   }
 }

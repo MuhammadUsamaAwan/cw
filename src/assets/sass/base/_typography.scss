@@ -13,7 +13,7 @@ body {
 .heading-primary,
 .heading-animation {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4.5rem;
   @include respond(tab-land) {
     font-size: 4rem;
   }
@@ -23,44 +23,20 @@ body {
 }
 
 .heading-primary {
-  color: $primary-heading-col;
+  color: $primary-col;
 }
 
 .heading-animation {
-  color: $heading-animation-col;
+  color: $secondary-col;
+  display: block;
 }
 
 .heading-primary-sub {
-  color: $primary-heading-sub-col;
-  font-size: 2.4rem;
+  color: $body-col;
+  font-size: 2rem;
   font-weight: 400;
   @include respond(tab-land) {
-    font-size: 2.2rem;
-  }
-  @include respond(phone) {
     font-size: 1.8rem;
-  }
-}
-
-.punchline {
-  font-size: 4rem;
-  text-align: center;
-  margin-bottom: 10rem;
-  background: linear-gradient(
-    to bottom right,
-    $heading-animation-col,
-    darken($heading-animation-col, 40)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  @include respond(tab-land) {
-    font-size: 3.5rem;
-  }
-  @include respond(phone) {
-    font-size: 3rem;
   }
 }
 
@@ -79,5 +55,34 @@ body {
     font-weight: 500;
     font-size: 1.8rem;
     text-transform: capitalize;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.5rem;
+  font-weight: 500;
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+}
+
+.punchline {
+  text-align: center;
+  font-size: 4rem;
+  background: linear-gradient(
+    to right,
+    $secondary-col,
+    darken($secondary-col, 20)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  @include respond(tab-land) {
+    font-size: 3.5rem;
+  }
+  @include respond(phone) {
+    font-size: 3rem;
   }
 }

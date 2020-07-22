@@ -45,7 +45,11 @@ const Wait = () => {
           <option value="Thesis Statement">Thesis statement</option>
         </select>
         <input type="email" placeholder="Your email" id="email" />
-        <input type="submit" value="Continue" id="submit" />
+        <input
+          type="submit"
+          value="Continue"
+          className="btn-submit btn--primary"
+        />
       </form>
       <p>
         By clicking “CONTINUE”, you agree to our terms of service and privacy

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
-import Calculator from "../pages/Calculator";
+import Calculator from "../elements/Calculator";
 
 const Header = () => {
   return (
@@ -27,7 +27,10 @@ const Header = () => {
         </h2>
 
         <Link to="/" className="btn btn--primary text-center">
-          Start Now
+          Order Now
+        </Link>
+        <Link to="/" className="btn btn--secondary text-center ml-2">
+          Live Chat
         </Link>
       </div>
 

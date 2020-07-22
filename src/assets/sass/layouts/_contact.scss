@@ -1,6 +1,6 @@
 .contact {
-  color: $contact-col;
   padding: 1rem 10rem;
+  margin: 0;
   @include respond(phone) {
     padding: 1rem 0rem;
   }

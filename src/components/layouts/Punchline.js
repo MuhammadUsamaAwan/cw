@@ -1,8 +1,11 @@
 import React from "react";
+import Flip from "react-reveal/Flip";
 
 const Punchline = () => {
   return (
-    <h1 className="punchline">"Overcome writing stress with WEBSITE NAME"</h1>
+    <Flip bottom>
+      <h1 className="punchline">"Overcome writing stress with WEBSITE NAME"</h1>
+    </Flip>
   );
 };
 

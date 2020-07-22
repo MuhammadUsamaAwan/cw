@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Free = () => {
   return (
-    <section className="free-services">
+    <section className="free-services" id="free-services">
       <h2 className="heading-secondary text-center mb-4">Free Services</h2>
       <div className="free-services__main">
         <p>
@@ -42,14 +42,11 @@ const Free = () => {
         Your Save: <span>$37.90</span>
       </h3>
       <div className="flex-center">
-        <Link to="/" className="btn btn--secondary text-center">
+        <Link to="/" className="btn btn--primary text-center">
           Order Now
         </Link>
-        <Link to="/" className="btn btn--primary text-center ml-1">
+        <Link to="/" className="btn btn--secondary text-center ml-1">
           Live Chat
-        </Link>
-        <Link to="/" className="btn btn--tertiary text-center ml-1">
-          Get 50% Off Here!
         </Link>
       </div>
     </section>

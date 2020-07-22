@@ -1,5 +1,7 @@
 .order {
-  margin-bottom: 25rem;
+  @include bg-img;
+  background-image: url("../../images/order_banner.jpg");
+  background-attachment: fixed;
   &__main {
     display: flex;
     flex-wrap: wrap;
@@ -12,14 +14,14 @@
     }
     & > :nth-child(even) {
       flex: 1;
+      margin: 0;
+      align-self: center;
       @include respond(phone) {
         display: none;
       }
     }
-    i {
-      margin: 0;
+    .fa-long-arrow-right {
       font-size: 4rem;
-      align-self: center;
     }
     &__step {
       @include respond(phone) {
@@ -27,10 +29,15 @@
       }
       i {
         border-radius: 50%;
-        border: 1px solid $primary-heading-col;
+        border: 1px solid $primary-col;
         padding: 2rem;
-        background-color: lighten($primary-heading-col, 50);
+        background-color: lighten($primary-col, 50);
         font-size: 5rem;
+        transition: all 0.5s ease-in-out;
+      }
+      i:hover {
+        color: $secondary-col;
+        border-color: $secondary-col;
       }
       h3 {
         padding: 1rem 0;

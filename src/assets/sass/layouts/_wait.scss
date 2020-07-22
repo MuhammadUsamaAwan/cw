@@ -1,5 +1,4 @@
 .why-wait {
-  margin-bottom: 20rem;
   &__form {
     @include flex-center;
     margin-bottom: 1rem;
@@ -21,14 +20,6 @@
     select,
     #email {
       margin-right: 1rem;
-    }
-    #submit {
-      cursor: pointer;
-      background-color: $calculator-submit;
-      color: #fff;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 0.5rem;
     }
   }
   p {

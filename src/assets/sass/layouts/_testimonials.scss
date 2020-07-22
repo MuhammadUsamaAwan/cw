@@ -1,5 +1,4 @@
 .testimonials {
-  margin-bottom: 25rem;
   &__main {
     @include flex-center;
     & > *:not(:last-child) {
@@ -57,7 +56,7 @@
       }
 
       &__rating {
-        color: $heading-animation-col;
+        color: $secondary-col;
         font-size: 2.2rem;
         font-weight: 300;
       }

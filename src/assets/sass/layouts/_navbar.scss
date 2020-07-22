@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   position: fixed;
   padding: 1rem 10rem;
-  @include respond(phone) {
-    padding: 1rem;
+  @include respond(tab-land) {
+    padding: 1rem 6rem;
   }
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   &--scroll {
     background-color: $navbar-bg;
     top: 0;
@@ -19,7 +18,8 @@
     @include respond(tab-land) {
       flex-direction: column;
       position: absolute;
-      top: 5.9rem;
+      top: 7.3rem;
+      right: 0rem;
       width: 100%;
       max-height: 0;
       overflow-y: hidden;
@@ -35,6 +35,10 @@
         text-decoration: none;
         color: $navbar-col;
         text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+      }
+      a:hover {
+        color: $navbar-active;
       }
       i {
         font-size: 2rem;
@@ -46,6 +50,9 @@
     font-weight: 600;
     border-radius: 5px;
     border: 2px solid #323c51;
+  }
+  &__primary:hover {
+    border: 2px solid $navbar-active;
   }
 
   //FUNCTIONALITY

@@ -30,3 +30,20 @@
   justify-content: center;
   align-items: center;
 }
+
+////////////////////////////////////////////
+/////////ADJUST BACKGROUND
+@mixin bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+////////////////////////////////////////////
+/////////BOX SHADOW
+@mixin box-shadow {
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+  -moz-box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+  border-radius: 1rem;
+}

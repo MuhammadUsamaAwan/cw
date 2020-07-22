@@ -1,16 +1,10 @@
 .why {
+  @include bg-img;
+  margin-top: 4rem;
+  margin-bottom: 0;
   background-image: url("../../images//why_banner.png");
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #fff;
-  margin: 0 -10rem;
-  padding: 2rem 10rem;
-  @include respond(phone) {
-    margin: 0;
-    padding: 0 1rem;
-  }
   &__main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -35,7 +29,7 @@
       display: inline-block;
     }
     i {
-      color: #00c853;
+      color: $secondary-col;
     }
     p {
       padding: 1rem 0;

@@ -7,6 +7,9 @@
   @include respond(tab-land) {
     margin-top: 6rem;
   }
+  @include respond(phone) {
+    margin-top: 10rem;
+  }
   & > * {
     flex: 1;
   }

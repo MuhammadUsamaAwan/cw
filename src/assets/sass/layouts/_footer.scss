@@ -4,9 +4,12 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem 0;
   padding: 4rem 10rem;
-  background-color: darken(#fff, 5);
+  margin: 0 1rem;
+  background-color: darken(#fff, 7);
+  border-radius: 8rem 8rem 0 0;
   @include respond(tab-land) {
     padding: 2rem 6rem;
+    margin: 0;
   }
   @include respond(phone) {
     padding: 2rem 1rem;
@@ -55,41 +58,76 @@
     .fa-pinterest-p {
       color: #cb1f24;
     }
+    .fa-pinterest-p:hover {
+      color: darken($color: #cb1f24, $amount: 15);
+    }
     .fa-facebook {
       color: #2b4ea9;
+    }
+    .fa-facebook:hover {
+      color: darken($color: #2b4ea9, $amount: 15);
     }
     .fa-twitter {
       color: #0095ff;
     }
+    .fa-twitter:hover {
+      color: darken($color: #0095ff, $amount: 15);
+    }
     .fa-youtube-play {
       color: #ff0000;
     }
+    .fa-youtube-play:hover {
+      color: darken($color: #ff0000, $amount: 15);
+    }
     .fa-instagram {
       color: #dd2a7b;
+    }
+    .fa-instagram:hover {
+      color: darken($color: #dd2a7b, $amount: 15);
     }
   }
   &__currency {
     .fa-cc-amex {
       color: #1d8dcc;
     }
+    .fa-cc-amex:hover {
+      color: darken($color: #1d8dcc, $amount: 15);
+    }
     .fa-cc-mastercard {
       color: #eb001b;
+    }
+    .fa-cc-mastercard:hover {
+      color: darken($color: #eb001b, $amount: 15);
     }
     .fa-cc-visa {
       color: #00579f;
     }
+    .fa-cc-visa:hover {
+      color: darken($color: #00579f, $amount: 15);
+    }
     .fa-cc-discover {
       color: #f77300;
+    }
+    .fa-cc-discover:hover {
+      color: darken($color: #f77300, $amount: 15);
     }
   }
   a,
   a:link,
+  a:visited,
+  &__seperator {
+    color: $primary-col;
+  }
+  a,
+  a:link,
   a:visited {
-    color: $primary-heading-col;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    color: $secondary-col;
   }
   &__seperator {
-    color: $primary-heading-col;
     margin: 0 1rem;
   }
   &__copy {

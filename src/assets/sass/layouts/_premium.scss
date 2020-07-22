@@ -2,20 +2,18 @@
   @include flex-center;
   text-align: center;
   flex-wrap: wrap;
-  margin-bottom: 10rem;
   & > :first-child {
     @include respond(phone) {
-      margin-bottom: 3rem;
+      padding-bottom: 3rem;
     }
   }
   & > * {
     flex: 1;
   }
   &__icon {
-    height: 35rem;
+    height: 30rem;
   }
   h3 {
-    text-transform: uppercase;
     margin: 2rem 0;
   }
   p {

@@ -1,27 +1,29 @@
 import React from "react";
 import { ReactComponent as Zero } from "../../assets/images/zero-plag.svg";
 import { ReactComponent as Quality } from "../../assets/images/premium.svg";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Premium = () => {
   return (
-    <section className="premium mb-6">
-      <div>
+    <section className="premium">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={500}>
         <Quality className="premium__icon" />
-        <h3>Premium Quality</h3>
+        <h3 className="heading-tertiary">Premium Quality</h3>
         <p>
           We have expertise in all academic subjects. All writing is custom
           content and high quality.
         </p>
-      </div>
-      <div>
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={1000}>
         <Zero className="premium__icon" />
-        <h3>Zero plagiarism</h3>
+        <h3 className="heading-tertiary">Zero plagiarism</h3>
         <p>
           We do not resell or archive any research or any writing. Your research
           paper will never appear online or anywhere else…unless you put it
           there.
         </p>
-      </div>
+      </ScrollAnimation>
     </section>
   );
 };

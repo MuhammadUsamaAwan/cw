@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
-      <Link to="/" component={Logo}></Link>
+      <Link to="/">
+        <Logo />
+      </Link>
       <p>
         All of papers you get at Samedayessay.com are meant for research
         purposes only. The papers are not supposed to be submitted for academic
